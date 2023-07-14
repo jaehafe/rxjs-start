@@ -8,7 +8,7 @@ const obs$ = new Observable((subscriber) => {
   subscriber.next(3);
   subscriber.next(4);
 
-  // 값을 다 발행한 뒤에는 compelte를 실행하여 메모리 해제
+  // 값을 다 발행한 뒤에는 complete를 실행하여 메모리 해제
   subscriber.complete();
 });
 
