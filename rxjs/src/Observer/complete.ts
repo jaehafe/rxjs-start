@@ -9,7 +9,12 @@ const obs$ = new Observable((subscriber) => {
 });
 
 obs$.subscribe(
-  console.log,
-  (err: Error) => console.error('발행중 오류', err),
-  () => console.log('발행물 완결')
+  // console.log,
+  // (err: Error) => console.error('발행중 오류', err),
+  // () => console.log('발행물 완결')
+  {
+    next: (v) => console.log(v),
+    error: (e) => console.error(e),
+    complete: () => console.info('complete'),
+  }
 );
